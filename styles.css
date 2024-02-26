@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Tahoma', 'sans-serif';
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(135deg, 
+    rgba(196,3,222,1) 0%, 
+    rgba(254,25,183,1) 55%, 
+    rgba(0,212,255,1) 100%);
+}
+
+.todo-app {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 560px;
+    padding: 40px 30px;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.todo-app h2 {
+    text-align: center;
+    margin: 20px auto 35px;
+    font-size: 1.5rem;
+    color: rgb(2, 2, 179);
+    
+}
+
+h2 img {
+    margin: auto 10px;
+    width: 30px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    background-color: rgb(219, 218, 218);
+    border-radius: 35px;
+    margin-bottom: 25px;
+}
+
+#input-text {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 15px 10px;
+    color: black;
+
+}
+
+#btn {
+    border: none;
+    outline: none;
+    background-color: rgb(255, 139, 37);
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 15px;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    padding: 15px 10px 15px 50px;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 10px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 40px ;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background-color: #edeef0;
+}
+
